@@ -6,12 +6,15 @@ Part 1: Get started (45%) Create a HTML file and name it about.html. This page w
 introduction about you. Structure the document properly. Add the three elements header, section, and
 footer. In the header element, include an h1 heading element stating your names. Note: here is where
 you can get some help about header, sections and footer: In the section element, first include a new
-header, an image and three paragraphs below the header. The paragraphs should contain the
-following: 1. Your high school subjects and experiences 2. Your coding skills 3. Your hobbies In the
-header element within the section add an h2 heading tag containing the title "This is us". Include
-the image between the heading and the first paragraph. It might be an image of anything. It can be a
-picture of you in a cape, or it can be a picture of something entirely different. In the footer,
-write "Created by Your Name". Of course, subside the "your names" with your actual name.
+header, an image and three paragraphs below the header. The paragraphs should contain the following:
+
+1. Your high school subjects and experiences
+2. Your coding skills
+3. Your hobbies In the header element within the section add an h2 heading tag containing the title
+   "This is us". Include the image between the heading and the first paragraph. It might be an image
+   of anything. It can be a picture of you in a cape, or it can be a picture of something entirely
+   different. In the footer, write "Created by Your Name". Of course, subside the "your names" with
+   your actual name.
 
 Part 2: Add more images (15%) Create a new section element, below your previous, but above the
 footer. Add a header element to it, and fill it with an h2 tag containing the title "My favorites".
