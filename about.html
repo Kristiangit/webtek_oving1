@@ -11,6 +11,34 @@
         p {
             max-width: 750px;
         }
+
+        table {
+        border-collapse: collapse; /* Collapsing borders */
+        width: 100%;
+        }
+
+        /* Applying styles to table headers */
+        th {
+        background-color: #f2f2f2; /* Setting background color */
+        border: 1px solid #dddddd; /* Adding border */
+        text-align: left; /* Aligning text to the left */
+        padding: 8px; /* Adding padding */
+        }
+
+        /* Applying styles to table rows */
+        tr {
+        border: 1px solid #dddddd; /* Adding border */
+        }
+
+        /* Applying styles to table cells */
+        td {
+        padding: 8px; /* Adding padding */
+        }
+
+        /* Applying different background color to even rows */
+        tr:nth-child(even) {
+        background-color: #f2f2f2;
+        }
     </style>
 </head>
 <body>
@@ -24,8 +52,8 @@
         </header>
 
         <div style="display: flex; width: 100%;">
-            <img src="images/kristian.jpg" alt="" style="width: 42.86%">
-            <img src="images/nicolay.jpg" alt="" style="width: 57.14%">
+            <img src="images/kristian.jpg" alt="Kristian chilling on the couch (It's actually one of Nicolay's cats)" style="width: 42.86%">
+            <img src="images/nicolay.jpg" alt="Nicolay sleeping on a bed (It's actually another one of Nicolay's cats)" style="width: 57.14%">
         </div>
 
 
@@ -59,11 +87,47 @@
         </header>
     </section>
     <section id="table">
-
+        <header>
+            <h2>Questions</h2>
+        </header>
+        <table>
+            <thead>
+                <tr>
+                    <th>Questions</th>
+                    <th>Answers</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1. What does the server in client server architecture do?</td>
+                    <td>The server processes requests from the client and returns the corresponding data.</td>
+                </tr>
+                <tr>
+                    <td>2. What does the client do? </td>
+                    <td>The client sends requests to the server and outputs or shows the data it gets from the server</td>
+                </tr>
+                <tr>
+                    <td>3. What is an IP address? </td>
+                    <td>An address used to identify a device on the internet or a local network</td>
+                </tr>
+                <tr>
+                    <td>4. What is DNS? </td>
+                    <td>DNS is the Domain Name System which routes your web browser to websites through domains.</td>
+                </tr>
+                <tr>
+                    <td>5. What is the difference between Internet and WWW? </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6. Explain what HTML is?</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
     </section>
-    <section id="urls">
-
-    </section>
+    <br>
+    <br>
+    <br>
     <footer>
         <span>Created by Nicolay Bennett Rennemo & Kristian Numme</span>
     </footer>
