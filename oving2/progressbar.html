@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        .progress {
+            width: 250px;
+            height: 30px;
+            background-color: grey;
+            border-radius: 24px;
+        }
+        .progress-bar {
+            z-index: 10;
+            height: 30px;
+            border-radius: 24px;
+        }
+        .red{
+            background-color: red;
+            width: 33%
+        }
+        .yellow{
+            background-color: yellow;
+            width: 67%
+        }
+        .green{
+            background-color: green;
+            width: 100%
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="33"
+            aria-valuemin="0" aria-valuemax="100">
+            </div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar red" role="progressbar" aria-valuenow="33"
+            aria-valuemin="0" aria-valuemax="100">
+            </div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar yellow" role="progressbar" aria-valuenow="67"
+            aria-valuemin="0" aria-valuemax="100" >
+            </div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar green" role="progressbar" aria-valuenow="100"
+            aria-valuemin="0" aria-valuemax="100">
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
