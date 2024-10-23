@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 
@@ -42,12 +43,30 @@ nav ul li a {
   text-align: center;
   padding: 40px;
   background: #f4f4f4;
+  
+  @media (max-width: 800px){
+    padding: 20px;
+  }
 }
 
 .features {
   display: flex;
   justify-content: space-around;
   padding: 20px;
+  align-items: center;
+
+  @media (max-width: 1200px){
+    padding: 20px 10px;
+  }
+  @media (max-width: 1050px){
+    padding: 20px;
+    flex-direction: column;
+    min-height: 100%;
+  }
+  @media (max-width: 600px){
+    font-size: 14px;
+    min-height: 90%;
+  }
 }
 
 .feature-item {
@@ -55,6 +74,34 @@ nav ul li a {
   padding: 20px;
   border: 1px solid #ddd;
   width: 30%;
+  height: 400px;
+
+  @media (max-width: 1200px){
+    padding: 10px;
+  }
+  @media (max-width: 1050px){
+    display: flex;
+    width: 80%;
+    height: auto;
+  }
+  @media (max-width: 600px){
+    flex-direction: column;
+  }
+}
+
+.item-img {
+  max-width: 100%;
+  border-radius: 10px;
+  height: auto;
+  @media (max-width: 1050px){
+    max-width: 50%;
+    margin: 10px 15px;
+    
+  }
+  @media (max-width: 600px){
+    max-width: 70%;
+    align-self: center;
+  }
 }
 
 footer {
@@ -86,16 +133,25 @@ footer {
     </section>
     <section class="features">
       <div class="feature-item">
-        <h3>Feature 1</h3>
-        <p>Description of feature 1.</p>
+          <img class="item-img" src="img/template-kitchen.jpg" alt="Kitchen">
+        <div>
+          <h3>Buy a template</h3>
+          <p>Buy an easy to set up pre-made template kitchen.</p>
+        </div>
       </div>
       <div class="feature-item">
-        <h3>Feature 2</h3>
-        <p>Description of feature 2.</p>
+          <img class="item-img" src="img/floorplan.png" alt="Floor plan of a kitchen">
+        <div>
+          <h3>Make your own</h3>
+          <p>Customize your very own kitchen to all stylistic and functional needs you may have for your own kitchen.</p>
+        </div>
       </div>
       <div class="feature-item">
-        <h3>Feature 3</h3>
-        <p>Description of feature 3.</p>
+          <img class="item-img" src="img/kitchen-collage.png" alt="Collage of kitchens">
+        <div>
+          <h3>Inspiration Gallery</h3>
+          <p>Browse through previously made kitchens using our tools to spark your inner designer.</p>
+        </div>
       </div>
     </section>
   </main>
