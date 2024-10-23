@@ -5,7 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
     <style>
-        /* Styling for the image preview */
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            outline: none;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 10px;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(115deg, lightgrey 10%, darkgrey 90%);
+        }
+        .container{
+            max-width: 800px;
+            background: #fff;
+            width: 800px;
+            padding: 25px 40px 10px 40px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        .container h1{
+            text-align: center;
+        }
+        .container form{
+            padding: 30px 0 0 0;
+        }
+        .container form .form-row{
+            display: flex;
+            margin: 32px 0;
+            justify-content: center;
+        }
+        .container form .form-element{
+            display: flex;
+            flex-direction: column;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        .container form .form-btn {
+            background-color: #adadad;
+            border-radius: 13px;
+            font-size: 14px;
+            border-style: none;
+            color: #FFFFFF;
+            height: 40px;
+            padding-left: 15px;
+            padding-right: 15px;
+            position: relative;
+            text-align: center;
+            transition: color 100ms;
+        }
+        .container form .form-btn:hover,
+        .container form .form-btn:focus {
+            background-color: #9c9c9c;
+        }
         .image-preview {
             width: 150px;
             height: 150px;
@@ -13,6 +70,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            text-align: center;
             margin-bottom: 10px;
         }
         .image-preview img {
@@ -22,64 +80,118 @@
     </style>
 </head>
 <body>
-    <h1>Mandatory data collection (we are not selling this I promise)</h1>
+    <div class="container">
+    <h1>Assignment 3 Form</h1>
     <form>
-        <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname" required><br>
-        <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname" required><br>
+        <div class="form-element">
+            <span>* identifies a required field</span>
+        </div>
+        <div class="form-row">
+            <div class="form-element">
+                <label for="fname">First name:*</label><br>
+                <input type="text" id="fname" name="fname" required><br>
+            </div>
+            <div class="form-element">
+                <label for="lname">Last name:*</label><br>
+                <input type="text" id="lname" name="lname" required><br>
+            </div>
+        </div>
 
-        <label for="email">Email Address:</label><br>
-        <input type="text" id="email" name="email" required><br>
-        <label for="pswd">Password:</label><br>
-        <input type="password" id="pswd" name="pswd" minlength="8" required><br>
+        <div class="form-row">
+            <div class="form-element">
+                <label for="email">Email Address:*</label><br>
+                <input type="email" id="email" name="email" required><br>
+            </div>
+            <div class="form-element">
+                <label for="pswd">Password:*</label>
+                <input type="password" id="pswd" name="pswd" minlength="8" required><br>
+            </div>
+        </div>
+        
+        <div class="form-row">
+            <div class="form-element">
+                <label for="tel">Phone Number:*</label><br>
+                <input type="phone" id="phone" name="phone" placeholder="(123) 456-7890" pattern="\(\d{3}\)\s\d{3}-\d{4}" maxlength="14" required><br>
+            </div>
+            <div class="form-element">
+                <label for="dob">Date of birth:*</label><br>
+                <input type="date" id="dob" name="dob" required><br>
+            </div>
+        </div>
 
-        <label for="tel">Phone Number:</label><br>
-        <input type="phone" id="phone" name="phone" placeholder="(123) 456-7890" pattern="\(\d{3}\)\s\d{3}-\d{4}" maxlength="14" required><br>
-        <label for="dob">Date of birth:</label><br>
-        <input type="date" id="dob" name="dob" required><br>
-        <label for="country">Country of residence:</label><br>
-        <select id="country" name="country" required>
-            <option value="no">Norway</option>
-            <option value="se">Sweden</option>
-            <option value="dk">Denmark</option>
-            <option value="uk">United Kingdom</option>
-            <option value="us">United States</option>
-            <option value="other">Other</option>
-        </select><br>
+        <div class="form-element">
+            <label for="country">Country of residence:*</label><br>
+            <select id="country" name="country" required>
+                <option value="no">Norway</option>
+                <option value="se">Sweden</option>
+                <option value="dk">Denmark</option>
+                <option value="uk">United Kingdom</option>
+                <option value="us">United States</option>
+                <option value="other">Other</option>
+            </select><br>
+        </div>
+        
+        <div class="form-row">
+            <div class="form-element">
+                <legend>Gender identity:*</legend>
+                <div>
+                    <input type="radio" id="male" name="gender" value="Male" required>
+                    <label for="male">Male</label>
+                </div>
+                <div>
+                    <input type="radio" id="female" name="gender" value="Female" required>
+                    <label for="female">Female</label>
+                </div>
+                <div>
+                    <input type="radio" id="other" name="gender" value="Other" required>
+                    <label for="other">Other</label>
+                </div>
+            </div>
+            <div class="form-element">
+                <legend>Any interests?</legend>
+                <div>
+                    <input type="checkbox" id="sports" name="interests" value="Sports" required>
+                    <label for="sports">Sports</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="videogames" name="interests" value="Video Games" required>
+                    <label for="videogames">Video Games</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Studying" name="interests" value="Studying" required>
+                    <label for="Studying">Studying</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-element" style="padding-bottom: 30px;">
+            <label for="comments">Any additional comments?</label><br>
+            <textarea id="comments" name="comments" rows="3" cols="50">Leave comments here</textarea>
+        </div>
+        <div class="form-element" style="padding-bottom: 30px;">
+            <label for="satisfaction">How satisfied are you with this form?*</label><br>
+            <div style="display: flex; flex-direction: row; justify-content: space-between; width: 30%;">
+                <span>1</span>
+                <input type="range" id="satisfaction" name="satisfaction" min="1" max="10" required>
+                <span>10</span><br>
+            </div>
+        </div>
+        <div class="form-element">
+            <label for="pfp">Upload a profile picture!</label><br>
+            <div class="image-preview" id="imagePreview">
+                <span>No image selected</span>
+            </div>  
+            <input type="file" name="pfp" id="mypfp" accept="image/*">
+        </div>
 
-        <span>Disclose your gender:</span><br>
-        <input type="radio" id="male" name="interests" value="Male">
-        <label for="male">Male</label><br>
-        <input type="radio" id="female" name="interests" value="Female">
-        <label for="female">Female</label><br>
-        <input type="radio" id="other" name="interests" value="Other">
-        <label for="other">Other</label><br>
 
-        <span>Any interests?</span><br>
-        <input type="checkbox" id="html" name="interests" value="HTML">
-        <label for="html">HTML</label><br>
-        <input type="checkbox" id="css" name="interests" value="CSS">
-        <label for="css">CSS</label><br>
-        <input type="checkbox" id="javascript" name="interests" value="JavaScript">
-        <label for="javascript">JavaScript</label><br>
-
-        <label for="comments">Any additional comments?</label><br>
-        <input type="text" id="comments" name="comments"><br>
-        <label for="satisfaction">How satisfied are you with this form?</label><br>
-        <span>1</span>
-        <input type="range" id="satisfaction" name="satisfaction" min="1" max="10" required>
-        <span>10</span><br>
-
-        <label for="pfp">Upload a profile picture!</label><br>
-        <input type="file" name="pfp" id="mypfp" accept="image/*">
-        <div class="image-preview" id="imagePreview">
-            <span>No image selected</span>
-        </div>  
-        <input type="submit" value="Submit">
-        <input type="reset" value="Reset">
+        <div class="form-row" style="justify-content: space-evenly;">
+            <input type="submit" value="Submit" class="form-btn">
+            <input type="reset" value="Reset" class="form-btn">
+        </div>
 
     </form>
+    </div>
     <script>
         // Automatically filling in the format as the user types the phone number
         const phoneInput = document.getElementById('phone');
