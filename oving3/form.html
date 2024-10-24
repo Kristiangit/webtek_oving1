@@ -141,8 +141,8 @@
         
         <div class="form-row">
             <div class="form-element">
-                <label for="tel">Phone Number:*</label>
-                <input type="phone" id="phone" name="phone" placeholder="(123) 456-7890" pattern="\(\d{3}\)\s\d{3}-\d{4}" maxlength="14" required>
+                <label for="phone">Phone Number:*</label>
+                <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" pattern="\(\d{3}\)\s\d{3}-\d{4}" maxlength="14" required>
             </div>
             <div class="form-element">
                 <label for="dob">Date of birth:*</label>
@@ -153,6 +153,7 @@
         <div class="form-element">
             <label for="country">Country of residence:*</label>
             <select id="country" name="country" required>
+                <option value="">Choose one</option>
                 <option value="no">Norway</option>
                 <option value="se">Sweden</option>
                 <option value="dk">Denmark</option>
@@ -164,7 +165,7 @@
         
         <div class="form-row">
             <div class="form-element">
-                <legend>Gender identity:*</legend>
+                <h4>Gender identity:*</h4>
                 <div>
                     <input type="radio" id="male" name="gender" value="Male" required>
                     <label for="male">Male</label>
@@ -179,17 +180,17 @@
                 </div>
             </div>
             <div class="form-element">
-                <legend>Any interests?</legend>
+                <h4>Any interests?</h4>
                 <div>
-                    <input type="checkbox" id="sports" name="interests" value="Sports" required>
+                    <input type="checkbox" id="sports" name="interests" value="Sports">
                     <label for="sports">Sports</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="videogames" name="interests" value="Video Games" required>
+                    <input type="checkbox" id="videogames" name="interests" value="Video Games">
                     <label for="videogames">Video Games</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="Studying" name="interests" value="Studying" required>
+                    <input type="checkbox" id="Studying" name="interests" value="Studying">
                     <label for="Studying">Studying</label>
                 </div>
             </div>
@@ -203,12 +204,12 @@
             <label for="satisfaction">How satisfied are you with this form?*</label>
             <div id="range" style="display: flex; flex-direction: row; justify-content: space-between; width: 30%;">
                 <span>1</span>
-                <input type="range" id="satisfaction" name="satisfaction" min="1" max="10" required>
+                <input type="range" id="satisfaction" name="satisfaction" min="1" max="10">
                 <span>10</span>
             </div>
         </div>
         <div class="form-element">
-            <label for="pfp">Upload a profile picture!</label>
+            <label for="mypfp">Upload a profile picture!</label>
             <div class="image-preview" id="imagePreview">
                 <span>No image selected</span>
             </div>  
