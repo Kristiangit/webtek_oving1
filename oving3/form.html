@@ -25,7 +25,7 @@
         .container{
             max-width: 800px;
             background: #fff;
-            width: 800px;
+            /* width: 800px; */
             padding: 25px 40px 10px 40px;
             box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
         }
@@ -45,6 +45,9 @@
             flex-direction: column;
             padding-left: 30px;
             padding-right: 30px;
+        }
+        .container form input {
+            margin: 10px 0;
         }
         .container form .form-btn {
             background-color: #adadad;
@@ -74,8 +77,36 @@
             margin-bottom: 10px;
         }
         .image-preview img {
-            max-width: 100%;
-            max-height: 100%;
+            width: 100%;
+            height: 100%;
+        }
+        @media (max-width: 600px) {
+            form {
+                padding: 30px 10px 0 !important;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .form-element {
+                padding: 0 10px;
+                align-items: center;
+                margin: 10px 0;
+            }
+
+            .form-row {
+                flex-direction: column;
+                align-items: center;
+            }
+            form input {
+                max-width: 75vw;
+
+            }
+            form textarea {
+                max-width: 75vw;
+            }
+            #range {
+                width: auto !important;
+            }
         }
     </style>
 </head>
@@ -88,39 +119,39 @@
         </div>
         <div class="form-row">
             <div class="form-element">
-                <label for="fname">First name:*</label><br>
-                <input type="text" id="fname" name="fname" required><br>
+                <label for="fname">First name:*</label>
+                <input type="text" id="fname" name="fname" required>
             </div>
             <div class="form-element">
-                <label for="lname">Last name:*</label><br>
-                <input type="text" id="lname" name="lname" required><br>
+                <label for="lname">Last name:*</label>
+                <input type="text" id="lname" name="lname" required>
             </div>
         </div>
 
         <div class="form-row">
             <div class="form-element">
-                <label for="email">Email Address:*</label><br>
-                <input type="email" id="email" name="email" required><br>
+                <label for="email">Email Address:*</label>
+                <input type="email" id="email" name="email" required>
             </div>
             <div class="form-element">
                 <label for="pswd">Password:*</label>
-                <input type="password" id="pswd" name="pswd" minlength="8" required><br>
+                <input type="password" id="pswd" name="pswd" minlength="8" required>
             </div>
         </div>
         
         <div class="form-row">
             <div class="form-element">
-                <label for="tel">Phone Number:*</label><br>
-                <input type="phone" id="phone" name="phone" placeholder="(123) 456-7890" pattern="\(\d{3}\)\s\d{3}-\d{4}" maxlength="14" required><br>
+                <label for="tel">Phone Number:*</label>
+                <input type="phone" id="phone" name="phone" placeholder="(123) 456-7890" pattern="\(\d{3}\)\s\d{3}-\d{4}" maxlength="14" required>
             </div>
             <div class="form-element">
-                <label for="dob">Date of birth:*</label><br>
-                <input type="date" id="dob" name="dob" required><br>
+                <label for="dob">Date of birth:*</label>
+                <input type="date" id="dob" name="dob" required>
             </div>
         </div>
 
         <div class="form-element">
-            <label for="country">Country of residence:*</label><br>
+            <label for="country">Country of residence:*</label>
             <select id="country" name="country" required>
                 <option value="no">Norway</option>
                 <option value="se">Sweden</option>
@@ -128,7 +159,7 @@
                 <option value="uk">United Kingdom</option>
                 <option value="us">United States</option>
                 <option value="other">Other</option>
-            </select><br>
+            </select>
         </div>
         
         <div class="form-row">
@@ -165,19 +196,19 @@
         </div>
         
         <div class="form-element" style="padding-bottom: 30px;">
-            <label for="comments">Any additional comments?</label><br>
+            <label for="comments">Any additional comments?</label>
             <textarea id="comments" name="comments" rows="3" cols="50">Leave comments here</textarea>
         </div>
         <div class="form-element" style="padding-bottom: 30px;">
-            <label for="satisfaction">How satisfied are you with this form?*</label><br>
-            <div style="display: flex; flex-direction: row; justify-content: space-between; width: 30%;">
+            <label for="satisfaction">How satisfied are you with this form?*</label>
+            <div id="range" style="display: flex; flex-direction: row; justify-content: space-between; width: 30%;">
                 <span>1</span>
                 <input type="range" id="satisfaction" name="satisfaction" min="1" max="10" required>
-                <span>10</span><br>
+                <span>10</span>
             </div>
         </div>
         <div class="form-element">
-            <label for="pfp">Upload a profile picture!</label><br>
+            <label for="pfp">Upload a profile picture!</label>
             <div class="image-preview" id="imagePreview">
                 <span>No image selected</span>
             </div>  
