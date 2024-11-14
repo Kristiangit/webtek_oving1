@@ -1,5 +1,8 @@
 /* Task  1.2 */
 console.log('Task  1.2')
+for (let i = 1; i <= 20; i++) {
+    console.log(i);
+}
 
 /* Task  1.3 */
 console.log('Task  1.3')
